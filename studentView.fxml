@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.StudentController" prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <SplitPane dividerPositions="0.5025536261491318" layoutX="172.0" layoutY="180.0" prefHeight="798.0" prefWidth="1251.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TableView fx:id="tableViewStudent" prefHeight="398.0" prefWidth="324.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="tableColumnId" prefWidth="100.0" text="Id" />
+                                <TableColumn fx:id="tableColumnName" prefWidth="138.0" text="Nume" />
+                                <TableColumn fx:id="tableColumnGroup" prefWidth="105.0" text="Grupa" />
+                                <TableColumn fx:id="tableColumnEmail" prefWidth="154.0" text="Email" />
+                                <TableColumn fx:id="tableColumnProfessor" prefWidth="154.0" text="Profesor" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="558.0" prefWidth="639.0">
+                    <children>
+                        <GridPane hgap="5.0" prefHeight="137.0" prefWidth="382.0" vgap="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="70.0">
+                            <children>
+                                <Label text="Id" GridPane.rowIndex="1" />
+                                <Label text="Nume" GridPane.rowIndex="2" />
+                                <Label text="Grupa" GridPane.rowIndex="3" />
+                                <Label text="Email" GridPane.rowIndex="4" />
+                                <Label text="Profesor" GridPane.rowIndex="5" />
+                                <TextField fx:id="textFieldId" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="textFieldName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField fx:id="textFieldGroup" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                                <TextField fx:id="textFieldEmail" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                                <TextField fx:id="textFieldProfessor" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                            </children>
+                            <HBox spacing="15" alignment="bottom_left"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                <Button fx:id="ButtonAdd" onAction="#adauga" text="Adauga" />
+                                <Button fx:id="ButtonDelete" onAction="#sterge" text="Sterge" />
+                                <Button fx:id="ButtonUpdate" onAction="#update1" text="Update" />
+                            </HBox>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
